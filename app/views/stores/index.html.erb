@@ -1,0 +1,17 @@
+<h1>List of Stores</h1>
+<table>
+  <tr>
+    <th>Store Name</th>
+    <th>Street Address</th>
+    <th>City</th>
+  </tr>
+<% @stores['result'].each do |store| %>
+  <section>
+    <tr>
+      <td><%= link_to store['name'], store_path(store['id']) %></td>
+      <td><%= store['address_line_1'] %></td>
+      <td><%= store['city'] %></td>
+    </tr>
+  </section>
+<% end %>
+

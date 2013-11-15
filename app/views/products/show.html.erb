@@ -1,0 +1,11 @@
+<h1><%= @product["name"] %></h1>
+<% if @product["image_thumb_url"]  %>
+  <%= image_tag @product["image_thumb_url"] %>
+<% else %>
+  <%= image_tag("http://2.bp.blogspot.com/_Ze5Xm5fW-4o/TUnUBt6ADUI/AAAAAAAABJA/2WGSLTNK1K4/s1600/broken-link-image-gif.jpg") %>
+  <% end %><br>
+<ul>
+  <li><em>Price: </em>$<%= @product["price_in_cents"].to_f / 100 %></li>
+  <li><em>Price per oz: </em>$<%= (@product["price_in_cents"].to_f / 100) / (@product["package_unit_volume_in_milliliters"]*0.033814) %></li>
+</ul>
+

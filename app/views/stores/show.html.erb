@@ -1,0 +1,29 @@
+<h1><%= @store['name'] %></h1>
+<table>
+  <tr>
+    <td>
+      <%= @store['address_line_1'] %><br>
+      <%= @store['address_line_2'] %><br>
+      <%= @store['city'] %>, Ontario 
+      <%= @store['postal_code'] %>
+    </td>
+  </tr>
+   
+</table>
+
+<table>
+  <tr>
+    <th>Sun</th>
+    <th>Mon</th>
+    <th>Tu-F</th>
+    <th>Sat</th>
+  </tr>
+  <tr>
+    <th><%= @store['sunday_open'] / 60 %> - <%= (@store['sunday_close'] / 60) - 12 %>pm</th>
+    <th><%= @store['monday_open'] / 60 %> - <%= (@store['monday_close'] / 60) - 12 %>pm</th>
+    <th><%= @store['tuesday_open'] / 60 %> - <%= (@store['tuesday_close'] / 60) - 12 %>pm</th>
+    <th><%= @store['saturday_open'] / 60 %> - <%= (@store['saturday_close'] / 60) - 12 %>pm</th>
+  </tr>
+</table>
+
+
