@@ -1,5 +1,23 @@
 source 'https://rubygems.org'
 
+ 
+
+#
+# group :assets do
+#   gem 'bootstrap-sass', '~> 3.0.2.0'
+# end
+
+# Normalize
+gem "normalize-rails"
+# group :assets do
+
+#   gem 'therubyracer'
+#   gem 'less-rails'
+# end
+# gem "less-rails"
+
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 
@@ -42,4 +60,4 @@ end
 # gem 'capistrano', group: :development
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+#gem 'debugger', group: [:development, :test]

@@ -7,5 +7,7 @@
 <ul>
   <li><em>Price: </em>$<%= @product["price_in_cents"].to_f / 100 %></li>
   <li><em>Price per oz: </em>$<%= (@product["price_in_cents"].to_f / 100) / (@product["package_unit_volume_in_milliliters"]*0.033814) %></li>
+  <li><em>Inventroy Count in All Stores: </em><%= @product["inventory_count"] %></li>
 </ul>
+
 

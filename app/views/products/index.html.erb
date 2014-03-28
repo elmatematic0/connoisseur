@@ -1,4 +1,7 @@
 <h1>List of Products</h1>
+<%= link_to "<Previous Page", "#{@products['pager']['previous_page_path']}" %>  |  <%= link_to "Next Page >", "#{@products['pager']['next_page_path']}" %>
+<br><br>
+
 <% @products['result'].each do |product| %>
   <section>
     <%= link_to product['name'], product_path(product['id']) %>
@@ -6,3 +9,5 @@
     <%= product['primary_category'] %>
   </section>
 <% end %>
+
+

@@ -1,12 +1,17 @@
 class ProductsController < ApplicationController
   require 'open-uri'
-
+  
   def format_price(price_in_cents)
     price_in_dollars = price_in_cents.to_f / 100
   end
 
   def index
-    products_json = open('http://lcboapi.com/products').read
+    page = 1
+    if params[:page]
+      page = params[:page]
+    end
+
+    products_json = open("http://lcboapi.com/products?page=#{page}").read
     @products = JSON.parse(products_json)
   end
 
